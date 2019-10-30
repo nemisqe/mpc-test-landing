@@ -1,0 +1,49 @@
+body {
+    font-family: nimbus-sans, sans-serif;
+    font-weight: 400;
+    min-width: 1530px;
+    line-height: 1.428571429;
+    text-rendering: optimizeLegibility;
+}
+
+body .content-wrap {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+section {
+    display: block;
+}
+
+a:hover {
+    color:#2f2f2f
+}
+a:focus{
+    outline:thin dotted;
+    outline:5px auto -webkit-focus-ring-color;
+    outline-offset:-2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+}
+
+li {
+    list-style-type: none;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.basic-color {
+    background-color: #ffffff;
+}
