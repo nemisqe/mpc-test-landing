@@ -1,48 +1,95 @@
-.video-section-bg-wrap {
-    background-size: cover;
-    background-position: 50%;
-}
-
-.slider-container {
-    position: relative;
-    overflow: hidden;
-}
-
+* { box-sizing: border-box; }
 .video-background {
-
-    position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -99;
-    transform: scale(1.5);
 }
+
 .video-foreground,
 .video-background iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 570px;
     pointer-events: none;
 }
+
 #vidtop-content {
     top: 0;
     color: #fff;
 }
-.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
-.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
-.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
-@media (min-aspect-ratio: 16/9) {
+
+.vid-info {
+    position: absolute;
+    top: 250px;
+    right: 33%;
+    text-align: center;
+    left: 18%;
+    width: 65%;
+    color: #fff;
+    padding: 1rem;
+    font-size: 28px;
+    font-family: Avenir, Helvetica, sans-serif;
+}
+
+.vid-info h1 {
+    font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2;
+}
+
+@media (min-aspect-ratio: 21/9) {
     .video-foreground { height: 300%; top: -100%; }
 }
-@media (max-aspect-ratio: 16/9) {
-    .video-foreground { width: 300%; left: -100%; }
-}
+/*@media (max-aspect-ratio: 21/9) {*/
+/*    .video-foreground { width: 300%; left: -100%; }*/
+/*}*/
 @media all and (max-width: 600px) {
     .vid-info { width: 50%; padding: .5rem; }
     .vid-info h1 { margin-bottom: .2rem; }
 }
 @media all and (max-width: 500px) {
     .vid-info .acronym { display: none; }
+}
+
+.read-more-button {
+    position: relative;
+    border-radius: 0;
+    border: 0;
+    padding: 9px 15px 9px 25px;
+    font-family: nimbus-sans,sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    line-height: normal;
+    background-color: #ec1d24;
+    box-shadow: none;
+    transition: all .2s ease-in-out;
+}
+
+.read-more-button:before {
+    content: ">";
+    display: block;
+    position: absolute;
+    left: 8px;
+    bottom: 5px;
+    line-height: normal;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.read-more-container,
+.vid-info-description {
+    text-align: center;
+}
+
+.read-more-container>a:hover {
+    background-color: #c51117;
+    color: #fff;
+    outline: none;
+}
+
+.vid-info-description {
+    line-height: 1.35em;
 }
 
 

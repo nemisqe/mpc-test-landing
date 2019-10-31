@@ -2,6 +2,8 @@ body {
     font-family: nimbus-sans, sans-serif;
     font-weight: 400;
     min-width: 1530px;
+    margin: 0;
+    padding-top: 570px;
     line-height: 1.428571429;
     text-rendering: optimizeLegibility;
 }
@@ -11,8 +13,21 @@ body .content-wrap {
     flex: 1 0 auto;
 }
 
+@media (min-width: 1087px) {
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
 section {
     display: block;
+}
+
+p {
+    margin: 0 0 10px;
 }
 
 a:hover {
@@ -27,6 +42,12 @@ a:focus{
 * {
     margin: 0;
     padding: 0;
+}
+
+a,
+p,
+span {
+    font-family: nimbus-sans, sans-serif;
 }
 
 a {
@@ -46,4 +67,17 @@ li {
 
 .basic-color {
     background-color: #ffffff;
+}
+
+.outer {
+    margin: 0 auto;
+}
+
+.inner {
+    text-align: center;
+}
+
+.content-wrap {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
